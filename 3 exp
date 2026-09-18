@@ -1,0 +1,19 @@
+To make the Student Attendance App responsive for different screen sizes and orientations.
+
+Description:
+The Student Attendance App should work properly on different mobile devices and screen sizes. Flutter provides responsive UI techniques such as MediaQuery, LayoutBuilder, Orientation, and Expanded. These concepts are used to adjust the application interface according to the available screen space.
+
+In the attendance application, LayoutBuilder can be used to determine the available width and change the arrangement of attendance summary cards. On a small mobile screen, the cards can be arranged in fewer columns, while on a larger screen more information can be displayed horizontally.
+
+Expanded is used inside Row widgets so that components automatically share the available space. MediaQuery can be used to obtain screen dimensions when specific width or height information is required. Orientation can be used to detect portrait and landscape modes.
+
+This makes the application easier to use because the interface does not depend on a single fixed screen size.
+
+Used in the project:
+
+MediaQuery
+LayoutBuilder
+Orientation
+Expanded
+Responsive Row
+Responsive attendance dashboard
