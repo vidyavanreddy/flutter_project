@@ -1,0 +1,20 @@
+To implement navigation between different screens of the Student Attendance App.
+
+Description:
+Navigation allows users to move from one screen to another within the application. Flutter provides the Navigator class for managing navigation. The Student Attendance App uses multiple screens so that information can be organized clearly.
+
+The main application contains a Home/Dashboard screen, where attendance statistics are displayed. A Students screen displays the complete student list. When the user selects a student, the application can navigate to a Student Details screen, where detailed attendance information is displayed.
+
+The Navigator.push() method is used to open a new screen. The Navigator.pop() method is used to return to the previous screen. Student information can also be passed from the student list to the details screen.
+
+Navigation makes the application more organized and improves usability. Instead of displaying all information on a single page, related information is separated into different screens.
+
+Used in the project:
+
+Navigator
+Navigator.push()
+Navigator.pop()
+Student Details screen
+Students screen
+Home screen
+Passing student information
