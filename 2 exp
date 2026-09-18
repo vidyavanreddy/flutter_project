@@ -1,0 +1,23 @@
+To design the Student Attendance App interface using Flutter widgets and layouts.
+
+Description:
+This experiment is used to create the complete visual interface of the Student Attendance App. Flutter provides widgets such as Text, Icon, Container, Row, Column, Card, Scaffold, and AppBar for constructing the application interface.
+
+The app uses Scaffold as the basic page structure. An AppBar displays the application title. Column is used to arrange attendance information vertically, while Row is used to place buttons and summary information horizontally. Card widgets are used to display individual student information in a clean format.
+
+Each student card contains the student's name, roll number, course, attendance percentage, and attendance buttons. ElevatedButton widgets are provided for marking a student as Present or Absent. Icon widgets are used to make the interface easier to understand.
+
+ListView is used to display multiple students and allows the user to scroll through the student list.
+
+Used in the project:
+
+Scaffold
+AppBar
+Text
+Icon
+Container
+Row
+Column
+Card
+ListView
+ElevatedButton
