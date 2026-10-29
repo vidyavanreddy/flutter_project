@@ -37,7 +37,7 @@ class CustomWidgetsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Custom Widgets & Theme (Exp 6)')),
-      body: Padding(
+      body: const Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

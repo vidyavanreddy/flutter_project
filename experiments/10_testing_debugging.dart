@@ -29,7 +29,7 @@ class _AttendanceTestingScreenState extends State<AttendanceTestingScreen> {
       // Test 1: Attendance percentage calculation formula test
       const int conducted = 40;
       const int attended = 30;
-      final double calculatedPercentage = (attended / conducted) * 100.0;
+      const double calculatedPercentage = (attended / conducted) * 100.0;
       assert(calculatedPercentage == 75.0, 'Calculation error');
       _log('✓ Test 1 Passed: Formula accurately calculated 75.0% for 30/40 classes.');
 

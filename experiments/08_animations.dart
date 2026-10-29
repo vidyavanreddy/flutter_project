@@ -56,7 +56,7 @@ class _AttendanceAnimationScreenState extends State<AttendanceAnimationScreen>
     return Scaffold(
       appBar: AppBar(title: const Text('Attendance Animations (Exp 8)')),
       body: Center(
-        child: Padding(
+        child: const Padding(
           padding: const EdgeInsets.all(24),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -68,7 +68,7 @@ class _AttendanceAnimationScreenState extends State<AttendanceAnimationScreen>
                   child: Card(
                     elevation: 6,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                    child: Padding(
+                    child: const Padding(
                       padding: const EdgeInsets.all(24),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
