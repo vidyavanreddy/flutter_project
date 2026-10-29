@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import '../providers/attendance_provider.dart';
-import '../models/student.dart';
 import '../widgets/student_card.dart';
 
 /// Experiment 5 Implementation:
@@ -108,9 +107,9 @@ class _MarkAttendanceScreenState extends State<MarkAttendanceScreen> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.12),
+        color: color.withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(6),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Text(
         text,
@@ -149,7 +148,7 @@ class _MarkAttendanceScreenState extends State<MarkAttendanceScreen> {
               color: Theme.of(context).cardColor,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.04),
+                  color: Colors.black.withValues(alpha: 0.04),
                   blurRadius: 6,
                   offset: const Offset(0, 3),
                 ),
@@ -407,7 +406,7 @@ class _MarkAttendanceScreenState extends State<MarkAttendanceScreen> {
           color: Theme.of(context).cardColor,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.08),
+              color: Colors.black.withValues(alpha: 0.08),
               blurRadius: 8,
               offset: const Offset(0, -2),
             ),
@@ -452,7 +451,7 @@ class _MarkAttendanceScreenState extends State<MarkAttendanceScreen> {
           label,
           style: TextStyle(
             fontSize: 11,
-            color: color.withOpacity(0.8),
+            color: color.withValues(alpha: 0.8),
             fontWeight: FontWeight.w500,
           ),
         ),

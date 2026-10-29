@@ -38,7 +38,7 @@ class StudentCard extends StatelessWidget {
         side: BorderSide(
           color: student.todayStatus == AttendanceStatus.notMarked
               ? Colors.grey.shade200
-              : student.statusColor.withOpacity(0.3),
+              : student.statusColor.withValues(alpha: 0.3),
           width: 1.2,
         ),
       ),
@@ -173,9 +173,9 @@ class StudentCard extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
-                      color: percentColor.withOpacity(0.12),
+                      color: percentColor.withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: percentColor.withOpacity(0.3)),
+                      border: Border.all(color: percentColor.withValues(alpha: 0.3)),
                     ),
                     child: Column(
                       children: [
@@ -275,7 +275,7 @@ class StudentCard extends StatelessWidget {
                 style: TextStyle(fontSize: 12, color: activeColor),
               ),
               style: OutlinedButton.styleFrom(
-                side: BorderSide(color: activeColor.withOpacity(0.5)),
+                side: BorderSide(color: activeColor.withValues(alpha: 0.5)),
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),

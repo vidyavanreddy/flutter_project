@@ -20,7 +20,7 @@ class CustomThemeAttendanceApp extends StatelessWidget {
           seedColor: Colors.deepPurple,
           brightness: Brightness.light,
         ),
-        cardTheme: CardTheme(
+        cardTheme: CardThemeData(
           elevation: 3,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         ),
@@ -94,7 +94,7 @@ class AttendanceCardWidget extends StatelessWidget {
         child: Row(
           children: [
             CircleAvatar(
-              backgroundColor: statusColor.withOpacity(0.15),
+              backgroundColor: statusColor.withValues(alpha: 0.15),
               child: Text(studentName[0], style: TextStyle(color: statusColor, fontWeight: FontWeight.bold)),
             ),
             const SizedBox(width: 14),
@@ -110,9 +110,9 @@ class AttendanceCardWidget extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
               decoration: BoxDecoration(
-                color: statusColor.withOpacity(0.1),
+                color: statusColor.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: statusColor.withOpacity(0.3)),
+                border: Border.all(color: statusColor.withValues(alpha: 0.3)),
               ),
               child: Text(
                 '${percentage.toStringAsFixed(1)}%',
@@ -125,3 +125,4 @@ class AttendanceCardWidget extends StatelessWidget {
     );
   }
 }
+

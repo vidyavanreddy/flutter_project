@@ -41,3 +41,4 @@ void main() {
     print('Result: Shortage Alert! Must attend $requiredMoreClasses consecutive classes to qualify.');
   }
 }
+

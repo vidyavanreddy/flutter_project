@@ -84,7 +84,7 @@ class StudentDetailScreen extends StatelessWidget {
                       border: Border.all(color: Colors.white, width: 4),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.15),
+                          color: Colors.black.withValues(alpha: 0.15),
                           blurRadius: 10,
                           offset: const Offset(0, 4),
                         ),
@@ -143,10 +143,10 @@ class StudentDetailScreen extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 24),
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
               decoration: BoxDecoration(
-                color: student.statusColor.withOpacity(0.12),
+                color: student.statusColor.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: student.statusColor.withOpacity(0.3),
+                  color: student.statusColor.withValues(alpha: 0.3),
                   width: 1.5,
                 ),
               ),

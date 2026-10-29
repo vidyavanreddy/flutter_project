@@ -97,3 +97,4 @@ class _AttendanceAnimationScreenState extends State<AttendanceAnimationScreen>
     );
   }
 }
+

@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 140,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.white.withOpacity(0.1),
+                    color: Colors.white.withValues(alpha: 0.1),
                   ),
                 ),
                 Container(
@@ -56,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   height: 110,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.white.withOpacity(0.2),
+                    color: Colors.white.withValues(alpha: 0.2),
                   ),
                 ),
                 Container(
@@ -89,7 +89,7 @@ class _SplashScreenState extends State<SplashScreen> {
               'Flutter & Dart Academic Lab Project',
               style: TextStyle(
                 fontSize: 14,
-                color: Colors.white.withOpacity(0.8),
+                color: Colors.white.withValues(alpha: 0.8),
                 letterSpacing: 0.2,
               ),
             ),

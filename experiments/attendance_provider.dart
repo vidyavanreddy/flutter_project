@@ -27,3 +27,4 @@ class AttendanceSessionModel extends ChangeNotifier {
     notifyListeners();
   }
 }
+
