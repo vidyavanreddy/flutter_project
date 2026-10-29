@@ -1,0 +1,11 @@
+{
+  "name": "Student Attendance App",
+  "short_name": "AttendanceApp",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#6750A4",
+  "theme_color": "#6750A4",
+  "description": "Student Attendance Management System built with Flutter and Dart.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}
