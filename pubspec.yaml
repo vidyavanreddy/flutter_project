@@ -1,5 +1,5 @@
 name: student_attendance_app
-description: "A comprehensive Student Attendance App in Flutter using Dart, implementing syllabus experiments (Widgets, Layouts, Responsive Design, Navigation, Form Validations, and State Management)."
+description: "A comprehensive Student Attendance App in Flutter using Dart, implementing syllabus experiments 1 to 10 (Widgets, Layouts, Responsive Design, Navigation, State Management, Forms, Animations, REST API, and Testing)."
 publish_to: "none"
 version: 1.0.0+1
 
@@ -9,8 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cupertino_icons: ^1.0.8
   provider: ^6.1.2
   intl: ^0.19.0
+  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:
