@@ -1,116 +1,184 @@
-# Student Attendance App (Flutter & Dart)
+# Student Attendance App (Flutter)
 
-A cross-platform Student Attendance Management application developed using **Flutter** and **Dart**, based on the academic lab syllabus experiments.
+## Abstract
 
----
+The Student Attendance App is a cross-platform mobile and web application developed using **Flutter** and **Dart** to provide a modern, efficient, and user-friendly solution for tracking and managing academic student attendance. The application enables faculty, teachers, and administrators to take attendance in real time, monitor attendance percentages, identify students with shortages, record historical sessions, and maintain student directories in a centralized environment.
 
-## 📌 Project Overview
-The Student Attendance App enables faculty and educators to mark, manage, and monitor student attendance across classes and departments. The application leverages Flutter's reactive widget system and Dart's object-oriented architecture to deliver an interactive, responsive experience across mobile, tablet, and web platforms.
-
-### Syllabus Experiments Implemented:
-| Experiment | Topic Covered | Implementation in App |
-| :--- | :--- | :--- |
-| **Experiment 1** | Introduction to Flutter & Dart SDK | Application entry point (`main()`, `runApp()`), `MaterialApp`, `Student` & `AttendanceRecord` Dart data models. |
-| **Experiment 2** | Fundamental Widgets & Layouts | `Row`, `Column`, `Stack`, `Container`, `Card`, `Icon`, `Text`, `ElevatedButton`. |
-| **Experiment 3** | Responsive UI & Media Queries | `MediaQuery` breakpoint (`< 600px` for Mobile `ListView.builder` vs `GridView.builder` for Tablet/Desktop). |
-| **Experiment 4** | Navigation & Screen Transitions | `Navigator.push()`, `Navigator.pop()`, `MaterialPageRoute`, and Named Routes (`/`, `/login`, `/dashboard`, `/mark-attendance`, etc.). |
-| **Experiment 5** | Stateful / Stateless & State Management | Local state with `setState()`, global state management using `Provider` (`ChangeNotifier`, `ChangeNotifierProvider`). |
-| **Login Module** | Form Validation & Text Controllers | `Form`, `GlobalKey<FormState>`, `TextEditingController`, email regex/at-sign check, password length validation, visibility toggle. |
+The app uses Flutter's reactive UI framework to deliver an adaptive and responsive experience across mobile, tablet, and desktop/web devices from a single codebase. Built-in state management using **Provider** and **setState()** ensures instantaneous metrics updates, while form validation safeguards data integrity during login and student enrollment.
 
 ---
 
-## 🏗️ Project Architecture & File Hierarchy
+## Experiments 1-10
+
+### Experiment 1 - Dart Language Basics
+Demonstrates Dart language fundamentals including variables, primitive data types, arithmetic operations, string interpolation, and conditional statements calculating student attendance percentage and exam eligibility criteria (75% threshold).
+
+**Output:**
+
+![Experiment 1 Output](outputs/exp1_output.svg)
+
+**Run the example:** `flutter run -t experiments/01_dart_basics.dart`
+
+---
+
+### Experiment 2 - Flutter Widgets and Layouts
+Uses fundamental Flutter widgets with **Row**, **Column**, and **Stack** to construct a student attendance card with stacked avatar status indicators, aligned metrics, and interactive action buttons.
+
+**Output:**
+
+![Experiment 2 Output](outputs/exp2_output.svg)
+
+**Run the example:** `flutter run -t experiments/02_widgets_layouts.dart`
+
+---
+
+### Experiment 3 - Responsive UI
+Uses **MediaQuery** and screen width breakpoints (`< 600px` for mobile `ListView.builder` vs `≥ 600px` for tablet/desktop `GridView.builder`) to adapt the student attendance interface dynamically across devices.
+
+**Output:**
+
+![Experiment 3 Output](outputs/exp3_output.svg)
+
+**Run the example:** `flutter run -t experiments/03_responsive_ui.dart`
+
+---
+
+### Experiment 4 - Navigation and Named Routes
+Uses **Navigator.pushNamed()**, named route tables, and **Navigator.pop()** to establish a clean navigation flow between Dashboard, Mark Attendance, and Student Profile screens.
+
+**Output:**
+
+![Experiment 4 Output](outputs/exp4_output.svg)
+
+**Run the example:** `flutter run -t experiments/04_navigation_named_routes.dart`
+
+---
+
+### Experiment 5 - Stateful & Stateless Widgets + State Management
+Demonstrates **StatelessWidget**, **StatefulWidget**, **setState()**, and **Provider** (`ChangeNotifier`, `ChangeNotifierProvider`, `notifyListeners()`) to manage live attendance counters and global session states.
+
+**Output:**
+
+![Experiment 5 Output](outputs/exp5_output.svg)
+
+**Run the example:** `flutter run -t experiments/05_setstate_counter.dart` (or `experiments/05_state_management.dart`)
+
+---
+
+### Experiment 6 - Custom Widgets and Themes
+Creates reusable custom widgets (`AttendanceCardWidget`, `StatBadge`, `AttendanceStatusBadge`) and applies a cohesive Material 3 theme using **ThemeData**, custom color schemes, card styles, and button styling.
+
+**Output:**
+
+![Experiment 6 Output](outputs/exp6_output.svg)
+
+**Run the example:** `flutter run -t experiments/06_custom_widgets_themes.dart`
+
+---
+
+### Experiment 7 - Forms, Validation and Error Handling
+Designs faculty login and student registration forms with input validation, field-level error messages, and submission handling using **Form**, **GlobalKey<FormState>**, **TextFormField**, and **SnackBar**.
+
+**Output:**
+
+![Experiment 7 Output](outputs/exp7_output.svg)
+
+**Run the example:** `flutter run -t experiments/07_forms_validation.dart`
+
+---
+
+### Experiment 8 - Animations
+Uses Flutter's animation framework with **AnimationController**, **FadeTransition**, and **SlideTransition** to smoothly animate verified attendance percentages and summary milestones.
+
+**Output:**
+
+![Experiment 8 Output](outputs/exp8_output.svg)
+
+**Run the example:** `flutter run -t experiments/08_animations.dart`
+
+---
+
+### Experiment 9 - REST API Integration
+Fetches online student records from a REST API using HTTP GET requests (`http` package). It parses JSON into Dart objects and displays the records with **FutureBuilder**, loading indicators, and retry error handling.
+
+**Output:**
+
+![Experiment 9 Output](outputs/exp9_output.svg)
+
+**Run the example:** `flutter run -t experiments/09_rest_api.dart`
+
+---
+
+### Experiment 10 - Testing and Debugging in Flutter
+Automated unit and widget tests for student attendance percentage calculation, state mutations, and UI rendering. Demonstrates Flutter debugging tools including `debugPrint`, assertions, and Flutter DevTools.
+
+**Output:**
+
+![Experiment 10 Output](outputs/exp10_output.svg)
+
+**Run tests:** `flutter test`
+
+---
+
+## Experiment Files Directory
 
 ```text
-flutter_project/
-├── pubspec.yaml                       # Dependencies (flutter, provider, intl, flutter_lints)
-├── analysis_options.yaml              # Linting and static analysis rules
-├── web/                               # Web support files (Chrome/Web runner)
-│   ├── index.html
-│   └── manifest.json
-├── test/
-│   └── widget_test.dart               # Unit and widget tests
-└── lib/
-    ├── main.dart                      # Root entry, Named routes, MultiProvider setup
-    ├── models/
-    │   ├── student.dart               # Student entity with percentage calculation & status enums
-    │   └── attendance_record.dart     # Historical session log model
-    ├── providers/
-    │   └── attendance_provider.dart   # ChangeNotifier handling students list, metrics, and actions
-    ├── screens/
-    │   ├── splash_screen.dart         # Intro screen with Stack decorative circles and auto-route
-    │   ├── login_screen.dart          # Form validation login screen (Experiment 8 syllabus)
-    │   ├── dashboard_screen.dart      # Responsive dashboard with stats, Stack header & Drawer
-    │   ├── mark_attendance_screen.dart# Real-time attendance marking with bulk actions & counters
-    │   ├── students_list_screen.dart  # Responsive student directory with search & filter
-    │   ├── student_detail_screen.dart # Student profile with Stack avatar, gauge, and history
-    │   ├── attendance_history_screen.dart # Past date logs and attendance rate breakdown
-    │   └── add_student_screen.dart    # New student registration form with validators
-    ├── widgets/
-    │   ├── student_card.dart          # Card widget with Row, Column, Stack status badge & buttons
-    │   ├── stat_card.dart             # Metric card (Container, Row, Column, Icon, Text)
-    │   └── responsive_builder.dart    # Responsive helper with MediaQuery breakpoints
-    └── utils/
-        └── mock_data.dart             # Pre-populated student and session datasets
+experiments/
+├── 01_dart_basics.dart
+├── 02_widgets_layouts.dart
+├── 03_responsive_ui.dart
+├── 04_navigation_named_routes.dart
+├── 05_setstate_counter.dart
+├── 05_state_management.dart
+├── 06_custom_widgets_themes.dart
+├── 07_forms_validation.dart
+├── 08_animations.dart
+├── 09_rest_api.dart
+├── 10_testing_debugging.dart
+└── attendance_provider.dart
 ```
 
 ---
 
-## 🚀 Key Features
+## Automated CI Verification
 
-1. **Faculty & Admin Login with Validations**:
-   - `GlobalKey<FormState>` input validation.
-   - Email format checking (must contain `@`).
-   - Password security validator (minimum 6 characters).
-   - Password obscure toggle (`visibility` / `visibility_off`).
-   - Quick one-click "Autofill Demo Credentials" button for lab assessment.
+Continuous integration is automated via GitHub Actions in [`.github/workflows/flutter-verification.yml`](.github/workflows/flutter-verification.yml) to run code analysis and automated tests on every push to `main`:
 
-2. **Interactive Attendance Marking**:
-   - Mark students as **Present**, **Absent**, or **Late**.
-   - Bulk actions: **Mark All Present**, **Mark All Absent**, and **Reset**.
-   - Live counter tracking present, absent, late, and turnout rate.
-   - Date picker to record attendance for any calendar date.
-   - Filter by course/branch and real-time student search.
-
-3. **Responsive UI for All Screen Sizes**:
-   - Adapts dynamically between mobile screens (< 600px) and tablet/desktop screens (≥ 600px).
-   - Seamlessly switches between `ListView.builder` and `GridView.builder`.
-
-4. **Multi-Screen Navigation**:
-   - Uses both Flutter **Named Routes** and direct **MaterialPageRoute** with parameter passing.
-   - Back navigation handled via `Navigator.pop()`.
-
-5. **State Management with Provider & setState**:
-   - `AttendanceProvider extends ChangeNotifier` notifies all listening widgets when attendance changes.
-   - Local state handled with `setState` for UI toggles, date pickers, and controllers.
+```bash
+flutter analyze
+flutter test
+```
 
 ---
 
-## 💻 How to Run the Application
+## Run the Combined Student Attendance App (Flutter Web & Mobile)
+
+The default app entry point (`lib/main.dart`) is a comprehensive faculty dashboard with student directory, live attendance marker, history logs, and profile inspection.
 
 ### Prerequisites:
-- Flutter SDK (3.0.0 or higher)
-- Dart SDK
-- Google Chrome (for web) or Android Studio / VS Code with an emulator or connected device
+- Flutter SDK (stable channel)
+- Google Chrome (for web) or Android Device / Emulator
 
-### Steps to Run:
+### Run locally:
 ```bash
-# 1. Clone the repository
-git clone https://github.com/vidyavanreddy/flutter_project.git
-cd flutter_project
-
-# 2. Get dependencies
+# 1. Fetch dependencies
 flutter pub get
 
-# 3. Run on Chrome (Web)
+# 2. Run in Chrome (Web)
 flutter run -d chrome
 
-# 4. Or run on an Android Device / Emulator
+# 3. Or run on an Android Device / Emulator
 flutter run
 ```
 
+### Build for production web hosting:
+```bash
+flutter build web --release
+```
+The deployable web output will be generated in `build/web/`.
+
 ---
 
-## 👨‍💻 Author & Repository
+## Author & Repository
+- **Student / Author**: Vidyavan Reddy
 - **GitHub Repository**: [https://github.com/vidyavanreddy/flutter_project.git](https://github.com/vidyavanreddy/flutter_project.git)
-- **Lab Course**: Mobile Application Development with Flutter & Dart
