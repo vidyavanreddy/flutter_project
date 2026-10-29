@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#f8f9fa"/>
+  <!-- Screen 1: Dashboard -->
+  <rect x="50" y="70" width="230" height="380" rx="16" fill="#ffffff" stroke="#6750a4" stroke-width="2"/>
+  <rect x="50" y="70" width="230" height="42" rx="14" fill="#6750a4"/>
+  <text x="90" y="96" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">Home Dashboard</text>
+  <rect x="80" y="240" width="170" height="38" rx="8" fill="#6750a4"/>
+  <text x="105" y="264" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">Mark Attendance →</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 290 260 L 340 260" stroke="#6750a4" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="290" y="245" font-family="Arial" font-size="10" fill="#6750a4">pushNamed('/mark')</text>
+
+  <!-- Screen 2: Mark Attendance -->
+  <rect x="350" y="70" width="230" height="380" rx="16" fill="#ffffff" stroke="#6750a4" stroke-width="2"/>
+  <rect x="350" y="70" width="230" height="42" rx="14" fill="#6750a4"/>
+  <text x="390" y="96" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">Mark Attendance</text>
+  <rect x="380" y="240" width="170" height="38" rx="8" fill="#2e7d32"/>
+  <text x="405" y="264" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">Student Profile →</text>
+  <rect x="380" y="295" width="170" height="34" rx="8" fill="#f1f3f4" stroke="#ccc"/>
+  <text x="430" y="317" font-family="Arial" font-size="12" fill="#555">← Go Back</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 590 260 L 640 260" stroke="#6750a4" stroke-width="3"/>
+  <text x="590" y="245" font-family="Arial" font-size="10" fill="#6750a4">pushNamed()</text>
+
+  <!-- Screen 3: Details -->
+  <rect x="650" y="70" width="230" height="380" rx="16" fill="#ffffff" stroke="#6750a4" stroke-width="2"/>
+  <rect x="650" y="70" width="230" height="42" rx="14" fill="#6750a4"/>
+  <text x="690" y="96" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">Student Profile</text>
+  <circle cx="765" cy="180" r="30" fill="#6750a4"/>
+  <text x="753" y="190" fill="#fff" font-size="28">🎓</text>
+  <text x="685" y="240" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Vidyavan Reddy</text>
+  <rect x="680" y="300" width="170" height="38" rx="8" fill="#6750a4"/>
+  <text x="720" y="324" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">← Navigator.pop()</text>
+</svg>

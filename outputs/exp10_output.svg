@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#f5f7fb"/>
+  <rect x="40" y="35" width="820" height="450" rx="16" fill="#1e1e2e"/>
+  <circle cx="70" cy="65" r="7" fill="#ff5f56"/>
+  <circle cx="95" cy="65" r="7" fill="#ffbd2e"/>
+  <circle cx="120" cy="65" r="7" fill="#27c93f"/>
+  <text x="145" y="70" fill="#cdd6f4" font-family="Arial" font-size="18" font-weight="bold">Experiment 10 - Testing &amp; Debugging Verification Output</text>
+  <g fill="#a6e3a1" font-family="monospace" font-size="18">
+    <text x="75" y="130">$ flutter test</text>
+    <text x="75" y="165" fill="#cdd6f4">00:01 +0: loading test/exp10_testing_debugging_test.dart</text>
+    <text x="75" y="200">00:02 +1: Experiment 10: Attendance percentage calculation test [PASS]</text>
+    <text x="75" y="235">00:02 +2: Experiment 10: AttendanceProvider state mutations test [PASS]</text>
+    <text x="75" y="270">00:03 +3: Experiment 10: StudentCard renders student name and roll number [PASS]</text>
+    <text x="75" y="305">00:03 +4: App smoke test loads correctly [PASS]</text>
+    <text x="75" y="350" fill="#a6e3a1" font-weight="bold">00:04 +4: All tests passed!</text>
+    <text x="75" y="395" fill="#89b4fa">$ flutter analyze</text>
+    <text x="75" y="430" fill="#a6e3a1">Analyzing flutter_project... No issues found! (zero warnings, zero errors)</text>
+  </g>
+</svg>

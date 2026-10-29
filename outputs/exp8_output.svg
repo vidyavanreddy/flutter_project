@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#f8f9fa"/>
+  <rect x="250" y="40" width="400" height="440" rx="20" fill="#ffffff" stroke="#6750a4" stroke-width="2"/>
+  <rect x="250" y="40" width="400" height="50" rx="18" fill="#6750a4"/>
+  <text x="350" y="72" fill="#ffffff" font-family="Arial" font-size="16" font-weight="bold">Animations (Exp 8)</text>
+
+  <!-- Animated Card with Shadow -->
+  <rect x="280" y="140" width="340" height="200" rx="16" fill="#ffffff" stroke="#e0e0e0" filter="drop-shadow(0 10px 15px rgba(103,80,164,0.15))"/>
+  <circle cx="450" cy="200" r="32" fill="#e8f5e9"/>
+  <text x="435" y="210" font-size="30" fill="#2e7d32">✓</text>
+  <text x="325" y="260" font-family="Arial" font-size="16" font-weight="bold" fill="#1c1b1f">Attendance Turnout Verified</text>
+  <text x="350" y="285" font-family="Arial" font-size="14" font-weight="bold" fill="#2e7d32">93.3% Present • Goal Achieved</text>
+  <text x="340" y="315" font-family="Arial" font-size="11" fill="#777">SlideTransition &amp; FadeTransition Active</text>
+
+  <!-- Replay Button -->
+  <rect x="330" y="380" width="240" height="45" rx="10" fill="#6750a4"/>
+  <text x="400" y="408" fill="#ffffff" font-family="Arial" font-size="14" font-weight="bold">↻ Replay Animation</text>
+</svg>
