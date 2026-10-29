@@ -73,12 +73,12 @@ class AttendanceWidgetsApp extends StatelessWidget {
               const SizedBox(height: 4),
               const Text(
                 'Roll: 21CS001 • Computer Science • Semester 6',
-                style: const TextStyle(color: Colors.grey),
+                style: TextStyle(color: Colors.grey),
               ),
               const SizedBox(height: 20),
 
               // Row displays student attendance metrics horizontally.
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
                   _StatBadge(icon: Icons.check_circle, label: '40 Attended', color: Colors.green),
@@ -136,4 +136,3 @@ class _StatBadge extends StatelessWidget {
     );
   }
 }
-
