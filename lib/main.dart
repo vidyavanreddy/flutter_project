@@ -16,12 +16,7 @@ import 'screens/add_student_screen.dart';
 /// - Experiment 5: Global state management with ChangeNotifierProvider
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => AttendanceProvider(),
-      child: const AttendanceApp(),
-    ),
-  );
+  runApp(const AttendanceApp());
 }
 
 class AttendanceApp extends StatelessWidget {
@@ -29,38 +24,41 @@ class AttendanceApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Student Attendance App',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-          brightness: Brightness.light,
-        ),
-        useMaterial3: true,
-        appBarTheme: const AppBarTheme(
-          centerTitle: false,
-          elevation: 0,
-        ),
-        cardTheme: CardThemeData(
-          elevation: 2,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
+    return ChangeNotifierProvider(
+      create: (context) => AttendanceProvider(),
+      child: MaterialApp(
+        title: 'Student Attendance App',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple,
+            brightness: Brightness.light,
+          ),
+          useMaterial3: true,
+          appBarTheme: const AppBarTheme(
+            centerTitle: false,
+            elevation: 0,
+          ),
+          cardTheme: CardThemeData(
+            elevation: 2,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(14),
+            ),
           ),
         ),
+        // Initial route shown when the app launches (Experiment 4 syllabus)
+        initialRoute: '/',
+        // Named routes table (Experiment 4 syllabus: 'Navigation with Named Routes')
+        routes: {
+          '/': (context) => const SplashScreen(),
+          '/login': (context) => const LoginScreen(),
+          '/dashboard': (context) => const DashboardScreen(),
+          '/mark-attendance': (context) => const MarkAttendanceScreen(),
+          '/students': (context) => const StudentsListScreen(),
+          '/history': (context) => const AttendanceHistoryScreen(),
+          '/add-student': (context) => const AddStudentScreen(),
+        },
       ),
-      // Initial route shown when the app launches (Experiment 4 syllabus)
-      initialRoute: '/',
-      // Named routes table (Experiment 4 syllabus: 'Navigation with Named Routes')
-      routes: {
-        '/': (context) => const SplashScreen(),
-        '/login': (context) => const LoginScreen(),
-        '/dashboard': (context) => const DashboardScreen(),
-        '/mark-attendance': (context) => const MarkAttendanceScreen(),
-        '/students': (context) => const StudentsListScreen(),
-        '/history': (context) => const AttendanceHistoryScreen(),
-        '/add-student': (context) => const AddStudentScreen(),
-      },
     );
   }
 }

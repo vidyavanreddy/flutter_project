@@ -23,5 +23,8 @@ void main() {
   testWidgets('App smoke test loads correctly', (WidgetTester tester) async {
     await tester.pumpWidget(const AttendanceApp());
     expect(find.byType(AttendanceApp), findsOneWidget);
+    // Drain pending timers from SplashScreen auto-navigation
+    await tester.pump(const Duration(seconds: 3));
+    await tester.pumpAndSettle();
   });
 }
